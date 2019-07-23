@@ -185,6 +185,7 @@ body {
 	}
 	.navbar-collapse {
 		padding-top: 1rem;
+		padding-bottom: 1rem;
 	}
 }
 
@@ -329,8 +330,8 @@ body {
 @media all and (min-width: 576px) and (-ms-high-contrast: none), (-ms-high-contrast: active)  {
 	/* IE10+ CSS styles go here */
 	.card-deck {
-		.card:not(.hidden-news) {
-			float: left;
+		.card {
+			float: left; 
 		}
 	}
 	.news-deck {

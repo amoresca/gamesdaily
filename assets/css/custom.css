@@ -12769,7 +12769,8 @@ body {
     font-size: 2rem; }
 
   .navbar-collapse {
-    padding-top: 1rem; } }
+    padding-top: 1rem;
+    padding-bottom: 1rem; } }
 @media (min-width: 576px) {
   .navbar {
     padding-top: 1rem;
@@ -12857,7 +12858,7 @@ body {
     right: 0; } }
 @media all and (min-width: 576px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* IE10+ CSS styles go here */
-  .card-deck .card:not(.hidden-news) {
+  .card-deck .card {
     float: left; }
 
   .news-deck .card {

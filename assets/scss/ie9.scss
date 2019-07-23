@@ -17,8 +17,8 @@
 
 @media all and (min-width: 576px) {
 	.card-deck {
-		.card:not(.hidden-news) {
-			float: left;
+		.card {
+			float: left; 
 		}
 	}
 	.news-deck {
