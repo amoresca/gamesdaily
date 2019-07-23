@@ -1,0 +1,383 @@
+// Bootstrap Variables
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1400px
+);
+
+$theme-colors: (
+  "primary": #4EB0B7
+);
+$purple: 					#312140;
+$dark-grey:					#2b2d42;
+$light-grey:				#8d99af;
+
+$body-bg:					$light-grey;
+$font-family-base:		'Nunito Sans', sans-serif;
+$card-cap-bg:  				#ffffff;
+$carousel-caption-width:	100%;
+
+@import "../bootstrap/scss/bootstrap";
+@import "../fontawesome/scss/fontawesome.scss";
+@import "../fontawesome/scss/solid.scss";
+@import "../fontawesome/scss/regular.scss"; 
+@import "../fontawesome/scss/brands.scss"; 
+
+body {
+	position: relative;
+}
+
+.btn-primary,
+.nav-pills .nav-link.active {
+	box-shadow: 0 6px darken($link-color, 15%);
+	position: relative;
+	transition: none;
+	&:hover, &:focus {
+		box-shadow: 0 4px darken($link-color, 15%);
+		background-color: $link-color;
+		border-color: $link-color;
+		top: 2px;
+	}
+}
+
+.navbar {
+	background-color: $purple;
+	border-bottom: 4px solid #6a567b;
+	.nav-pills {
+		.nav-link {
+			margin-right: .5rem;
+		}
+	}
+}
+
+.navbar-brand {
+	margin-right: 3rem;
+}
+
+.hero {
+	margin-top: 56px;
+	.parallax-window {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 300px;
+		position: relative;
+	}
+	.hero-content {
+		background-color: $dark-grey;
+		margin-left: -1px;
+		position: relative;
+		.hero-content-inner {
+			padding: 1.5rem 1.5rem 3rem;
+		}
+	}
+}
+
+.section {
+	padding: 50px 0;
+}
+
+.news-deck {
+	.card {
+		margin-bottom: 30px;
+		box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.19);
+	}
+	.article-title {
+		font-weight: 700;
+		line-height: 1;
+		color: $purple;
+	}
+	.card-link {
+		white-space: nowrap;
+	}
+	.fa-external-link-alt {
+		font-size: .9rem;
+		margin-left: 2px;
+	}
+	.hidden-news {
+		display: none;
+	}
+}
+
+#gotd {
+	.bg-image {
+		height: 400px;
+		background-position: left;
+	}
+	.content-inner {
+		padding: 2rem 10%;
+	}
+}
+
+#reviews {
+	h2 {
+		position: relative;
+		top: 18px;
+		z-index: 1;
+		left: 15px;
+		height: 0;
+	}
+}
+
+.review-carousel {
+	.carousel-item {
+		height: 50vh;
+		min-height: 400px;
+	}
+	.carousel-caption {
+		background-color: rgba(0, 0, 0, 0.58);
+		bottom: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.carousel-control-prev {
+		justify-content: flex-start;
+		padding-left: 2%;
+	}
+	.carousel-control-next {
+		justify-content: flex-end;
+		padding-right: 2%;
+	}
+}
+
+.review-cards {
+	.card {
+		border: 0;
+		border-radius: 0;
+		height: 300px;
+	}
+	.card-body {
+		background-color: rgba(0, 0, 0, 0.58);
+	}
+}
+
+#about {
+	background-color: $dark-grey;
+}
+
+.social-buttons {
+	.btn {
+		border-radius: 50%;
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@include media-breakpoint-only(xs) {
+	h1, .h1 {
+		font-size: 2rem;
+	}
+	.navbar-collapse {
+		padding-top: 1rem;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.navbar {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	.hero {
+		margin: 112px 5% 0;
+		padding-bottom: 3rem;
+		.parallax-window {
+			height: 400px;
+		}
+		.hero-content {
+			.hero-content-inner {
+				padding: 3rem;
+			}
+		}
+	}
+	.news-deck {
+		.card {
+			flex: 0 0 calc(50% - 30px);
+		}
+	}
+	.review-cards {
+		.card {
+			flex: auto;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.navbar {
+		.nav {
+			margin-left: auto;
+		}
+	}
+	.section {
+		padding: 10vh 0;
+	}
+	.review-cards {
+		.card {
+			flex: 1 0 0%;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.hero {
+		.parallax-window {
+			width: 50%;
+			height: 80vh;
+			min-height: 615px;
+		}
+		.hero-content {
+			width: 50%;
+			.hero-content-inner {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				padding: 0 3rem;
+			}
+		}
+	}
+	.news-deck {
+		.card {
+			flex: 0 0 calc(33% - 30px);
+		}
+	}
+	#gotd {
+		.bg-image {
+			height: auto;
+			background-attachment: fixed;
+			background-position: center;
+		}
+		.content-container {
+			height: 75vh;
+			min-height: 450px;
+			max-height: 800px;
+		}
+		.content-inner {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.hero {
+		.parallax-window {
+			height: 60vh;
+			min-height: 550px;
+			max-height: 800px;
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.hero {
+		.hero-content {
+			.hero-content-inner {
+				padding: 0 13%;
+			}
+		}
+	}
+	.news-deck {
+		.card {
+			flex: 0 0 calc(25% - 30px);
+		}
+	}
+	#gotd {
+		.bg-image {
+			background-position: center;
+		}
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+	.card-deck {
+		display: block;
+		.card:not(.hidden-news) {
+			display: block;
+		}
+	}
+	.review-cards {
+		.card-body {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+@media all and (min-width: 576px) and (-ms-high-contrast: none), (-ms-high-contrast: active)  {
+	/* IE10+ CSS styles go here */
+	.card-deck {
+		.card:not(.hidden-news) {
+			float: left;
+		}
+	}
+	.news-deck {
+		.card {
+			width: calc(50% - 30px);
+		}
+		.card-body {
+			min-height: 245px;
+		}
+	}
+	.review-cards {
+		.card {
+			width: calc(50% - 30px);
+		}
+	}
+}
+
+@media all and (min-width: 992px) and (-ms-high-contrast: none), (-ms-high-contrast: active)  {
+	/* IE10+ CSS styles go here */
+	.news-deck {
+		.card {
+			width: calc(33% - 30px);
+		} 
+	}
+}
+
+@media all and (min-width: 1600px) and (-ms-high-contrast: none), (-ms-high-contrast: active)  {
+	/* IE10+ CSS styles go here */
+	.news-deck {
+		.card {
+			width: calc(25% - 30px);
+		} 
+	}
+}
+
+/* Helper Classes */
+
+.bg-image {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.bg-purple {
+	background-color: $purple;
+}
+
+.img-circle {
+	border-radius: 50%;
+}

@@ -1,0 +1,53 @@
+/* IE9 and lower CSS styles go here */
+.card-deck {
+	display: block;
+	.card:not(.hidden-news) {
+		display: block;
+	}
+}
+.review-cards {
+	.card-body {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+
+@media all and (min-width: 576px) {
+	.card-deck {
+		.card:not(.hidden-news) {
+			float: left;
+		}
+	}
+	.news-deck {
+		.card {
+			width: calc(50% - 30px);
+		}
+		.card-body {
+			min-height: 245px;
+		}
+	}
+	.review-cards {
+		.card {
+			width: calc(50% - 30px);
+		}
+	}
+}
+
+@media all and (min-width: 992px) {
+	.news-deck {
+		.card {
+			width: calc(33% - 30px);
+		} 
+	}
+}
+
+@media all and (min-width: 1600px) {
+	.news-deck {
+		.card {
+			width: calc(25% - 30px);
+		} 
+	}
+}
